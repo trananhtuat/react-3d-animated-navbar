@@ -1,0 +1,57 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 5rem;
+
+    &__content {
+        max-width: 1120px;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.menu-toggle {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+
+    .bx-menu,
+    .bx-x {
+        position: absolute;
+        transition: 0.3s ease-in-out;
+    }
+
+    .bx-x {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.active .bx-x {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.active .bx-menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
